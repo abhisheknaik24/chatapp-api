@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes.js';
 import chatsRoutes from './routes/chatsRoutes.js';
 import messagesRoutes from './routes/messagesRoutes.js';
+import contactsRoutes from './routes/contactsRoutes.js';
 
 const app = express();
 
@@ -30,6 +31,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/chats', chatsRoutes);
 
 app.use('/api/messages', messagesRoutes);
+
+app.use('/api/contacts', contactsRoutes);
 
 (async () => {
   try {
